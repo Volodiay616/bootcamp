@@ -1,0 +1,68 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Odoo 14",
+            "type": "python",
+            "request": "launch",
+            "program": "${env:HOME}/Program Files/Odoo 14.0.20221023/server/odoo-bin",
+            "args": [
+                "--config=${env:HOME}/odoo/14.0/conf/odoo-local-tower.conf",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Odoo 14 Tower",
+            "type": "python",
+            "request": "launch",
+            "program": "${env:HOME}/odoo/14.0/src/odoo/odoo-bin",
+            "args": [
+                "--config=${env:HOME}/odoo/14.0/conf/odoo-local-tower.conf",
+                "--database=14_cetmix_tower_new",
+                "--update=cetmix_tower_server",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Odoo 14 Tower with tests",
+            "type": "python",
+            "request": "launch",
+            "program": "${env:HOME}/odoo/14.0/src/odoo/odoo-bin",
+            "args": [
+                "--config=${env:HOME}/odoo/14.0/conf/odoo-local-tower.conf",
+                "--database=14_cetmix_tower_test",
+                "--init=cetmix_tower_server",
+                "--test-enable",
+                "--stop-after-init",
+            ],
+            "console": "integratedTerminal",
+        },
+        {
+            "name": "Docker Debug",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: tower",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${env:HOME}/odoo", //локальная папка С:/odoo/
+                        "remoteRoot": "/home/odoo/odoo"  //папка с такой же структурой в докере
+                    }
+                ],
+            },
+        },{
+            "name": "Docker Tests",
+            "type": "docker",
+            "request": "launch",
+            "preLaunchTask": "docker-run: tower tests",
+            "python": {
+                "pathMappings": [
+                    {
+                        "localRoot": "${env:HOME}/odoo",
+                        "remoteRoot": "/home/odoo/odoo"
+                    }
+                ],
+            },
+        }
+    ]
+}
