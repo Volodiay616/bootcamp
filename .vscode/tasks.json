@@ -31,7 +31,7 @@
             "--database=14_bootcamp_1",
             "--update=sale_order_line_number",
           ],
-          "file": "/home/odoo/odoo/14.0/src/odoo/odoo-bin"
+          "file": "/home/odoo/odoo/14.0/src/odoo-bin"
         },
       },
       // Run Odoo with tests enabled. Stop when tests are finished
@@ -61,13 +61,13 @@
         },
         "python": {
           "args": [
-            "--config=/home/odoo/odoo/14.0/conf/odoo-docker-tower.conf",
+            "--config=/home/odoo/odoo/14.0/conf/odoo-docker-bootcamp.conf",
             "--database=14_cetmix_tower_test",
             "--init=cetmix_tower_server",
             "--test-enable",
             "--stop-after-init",
           ],
-          "file": "/home/odoo/odoo/14.0/src/odoo/odoo-bin"
+          "file": "/home/odoo/odoo/14.0/src/odoo-bin"
         },
       },
       // This image will be built for tasks
