@@ -5,7 +5,7 @@
             "name": "Odoo 14",
             "type": "python",
             "request": "launch",
-            "program": "${env:HOME}/Odoo/14.0/src/odoo-bin",
+            "program": "${env:HOME}/Odoo/14.0/odoo/odoo-bin",
             "args": [
                 "--config=${env:HOME}/odoo/14.0/conf/odoo-local-bootcamp.conf",
             ],
@@ -15,7 +15,7 @@
             "name": "Odoo 14 Tower",
             "type": "python",
             "request": "launch",
-            "program": "${env:HOME}/odoo/14.0/src/odoo-bin",
+            "program": "${env:HOME}/odoo/14.0/odoo/odoo-bin",
             "args": [
                 "--config=${env:HOME}/odoo/14.0/conf/odoo-docker-bootcamp.conf",
                 "--database=14_cetmix_tower_new",
@@ -27,7 +27,7 @@
             "name": "Odoo 14 Tower with tests",
             "type": "python",
             "request": "launch",
-            "program": "${env:HOME}/odoo/14.0/src/odoo-bin",
+            "program": "${env:HOME}/odoo/14.0/odoo/odoo-bin",
             "args": [
                 "--config=${env:HOME}/odoo/14.0/conf/odoo-docker-bootcamp.conf",
                 "--database=14_cetmix_tower_test",
@@ -41,11 +41,11 @@
             "name": "Docker Debug",
             "type": "docker",
             "request": "launch",
-            "preLaunchTask": "docker-run: tower",
+            "preLaunchTask": "docker-run: odoo",
             "python": {
                 "pathMappings": [
                     {
-                        "localRoot": "${env:HOME}/odoo", //локальная папка С:/odoo/
+                        "localRoot": "C:/odoo", //локальная папка С:/odoo/
                         "remoteRoot": "/home/odoo/odoo"  //папка с такой же структурой в докере
                     }
                 ],

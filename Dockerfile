@@ -1,4 +1,4 @@
-FROM python:3.7.12-bullseye
+FROM python:3.7.9
 ARG ODOO_VERSION=14.0
 ARG DOCKER_ODOO_UID=9999  
 ARG DOCKER_ODOO_GID=9999
@@ -37,7 +37,7 @@ RUN groupadd --gid ${DOCKER_ODOO_GID} odoo && useradd odoo -u ${DOCKER_ODOO_UID}
 
 # Set permissions
 RUN mkdir -p /home/odoo/odoo \
-    && chown -R odoo /home/odoo
+    && chown -R odoo C:/odoo
 
 # Expose Odoo services
 EXPOSE 5678 8069 8071 8072

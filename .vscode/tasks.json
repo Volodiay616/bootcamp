@@ -4,14 +4,14 @@
       // Run Odoo with debuger
       {
         "type": "docker-run",
-        "label": "docker-run: tower",
+        "label": "docker-run: odoo",
         "dockerRun": {
           "containerName": "bootcamp-14",
-          "image": "cetmix/python3.7-ready4odoo:14.0",
+          "image": "odoo-x86",
           "volumes": [
             {
               "containerPath": "/home/odoo/odoo",
-              "localPath": "${env:HOME}/odoo"
+              "localPath": "C:/odoo"
             }
           ],
           "ports": [
@@ -23,7 +23,7 @@
               "hostPort": 5678
             },
           ],
-          "customOptions": "--link db-shared:db"
+          "customOptions": "--link postgres-13:db"
         },
         "python": {
           "args": [
@@ -31,7 +31,7 @@
             "--database=14_bootcamp_1",
             "--update=sale_order_line_number",
           ],
-          "file": "/home/odoo/odoo/14.0/src/odoo-bin"
+          "file": "home/odoo/odoo/14.0/odoo/odoo-bin"
         },
       },
       // Run Odoo with tests enabled. Stop when tests are finished
@@ -67,7 +67,7 @@
             "--test-enable",
             "--stop-after-init",
           ],
-          "file": "/home/odoo/odoo/14.0/src/odoo-bin"
+          "file": "/home/odoo/odoo/14.0/odoo/odoo-bin"
         },
       },
       // This image will be built for tasks
