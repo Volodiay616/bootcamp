@@ -10,6 +10,8 @@
     'application': False,
     'installable': True,
     'data':[
-        'views/sale_order_line.xml',
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'views/sale_order_line.xml'
     ],
 }
