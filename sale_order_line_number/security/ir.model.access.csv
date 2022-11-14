@@ -1,4 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_sale_order_tag_salesman,sale.order.line.tag.salesman,model_sale_order_line_tag,sales_team.group_sale_salesman,1,1,0,0
 access_sale_order_tag_manager,sale.order.line.tag.manager,model_sale_order_line_tag,sales_team.group_sale_manager,1,1,1,1
-access_sale_order_tag_user,sale.order.line.tag.user,model_sale_order_line_tag,group_so_line_tag_user,1,0,0,0
+access_sale_order_tag_senior_salesman,sale.order.line.tag.senior.salesman,model_sale_order_line_tag,group_so_line_tag_senior_salesman,1,1,1,0
