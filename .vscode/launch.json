@@ -58,7 +58,7 @@
             "python": {
                 "pathMappings": [
                     {
-                        "localRoot": "${env:HOME}/odoo",
+                        "localRoot": "C:/odoo",
                         "remoteRoot": "/home/odoo/odoo"
                     }
                 ],

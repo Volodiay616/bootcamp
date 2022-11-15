@@ -14,4 +14,7 @@
         'security/ir.model.access.csv',
         'views/sale_order_line.xml'
     ],
+    'demo':[
+        'data/demo_data.xml',
+    ],
 }

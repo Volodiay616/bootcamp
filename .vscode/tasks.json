@@ -38,14 +38,13 @@
       {
         "type": "docker-run",
         "label": "docker-run: tower tests",
-        "dependsOn": ["docker-build"],
         "dockerRun": {
           "containerName": "tower-14",
-          "image": "odoo-debug:14.0-tower",
+          "image": "odoo-x86",
           "volumes": [
             {
               "containerPath": "/home/odoo/odoo",
-              "localPath": "${env:HOME}/odoo"
+              "localPath": "C:/odoo"
             }
           ],
           "ports": [
@@ -57,13 +56,13 @@
               "hostPort": 5678
             },
           ],
-          "customOptions": "--link db-shared:db"
+          "customOptions": "--link postgres-13:db"
         },
         "python": {
           "args": [
             "--config=/home/odoo/odoo/14.0/conf/odoo-docker-bootcamp.conf",
-            "--database=14_cetmix_tower_test",
-            "--init=cetmix_tower_server",
+            "--database=14_bootcamp_test",
+            "--init=sale_order_line_number",
             "--test-enable",
             "--stop-after-init",
           ],
