@@ -40,6 +40,7 @@ class TestOrderLine(TransactionCase):
         so_line_1 = self.sale_order_1.order_line[0]
         
         self.assertEqual(so_line_1.line_number, 1, "line number must be equal to 1")
+        self.assertEqual(so_line_1.product_id, self.product_cat, "must be product cat")
 
         #Ad line #2
         with Form(self.sale_order_1) as f:
@@ -51,11 +52,20 @@ class TestOrderLine(TransactionCase):
         so_line_2 = self.sale_order_1.order_line[1]
         
         self.assertEqual(so_line_2.line_number, 2, "line number must be equal to 2")
+        self.assertEqual(so_line_2.product_id, self.product_dog, "must be product dog")
           
-        self.sale_order_1.order_line[0].sequence = 12
+        self.sale_order_1.order_line[1].sequence = 6
               
-        self.assertEqual(so_line_1.line_number, 2, "line number must be equal to 2")
+        
+        so_line_2.invalidate_cache()
         self.assertEqual(so_line_2.line_number, 1, "line number must be equal to 1")
+        self.assertEqual(so_line_1.line_number, 2, "line number must be equal to 2")
+        
+        
+        
+        self.assertEqual(so_line_1.product_id, self.product_cat, "must be product cat")
+        self.assertEqual(so_line_2.product_id, self.product_dog, "must be product dog") 
+        
         
         # Delete first line
         so_line_2.unlink()

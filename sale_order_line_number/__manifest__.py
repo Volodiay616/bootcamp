@@ -12,6 +12,8 @@
     'data':[
         'security/security.xml',
         'security/ir.model.access.csv',
+        # 'report/sale_order_line_report_views.xml',
+        'report/sale_order_line_report_templates.xml',
         'views/sale_order_line.xml'
     ],
     'demo':[
