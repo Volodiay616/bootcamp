@@ -6,7 +6,7 @@
             <th name="th_order_line_number" class="text-left">Line Number</th>
         </xpath>
         <xpath expr="//div[hasclass('page')]/table/tbody/t/tr/t/td[@name='td_name']" position="before">
-            <td name="td_order_line_nymber"><span t-field="line.line_number"/></td>
+            <td name="td_order_line_number"><span t-field="line.line_number"/></td>
         </xpath>
     </template>
 </data>

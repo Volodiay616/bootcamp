@@ -28,8 +28,9 @@
         "python": {
           "args": [
             "--config=/home/odoo/odoo/14.0/conf/odoo-docker-bootcamp.conf",
-            "--database=14_bootcamp_1",
+            "--database=14_bootcamp_2",
             "--update=sale_order_line_number",
+            "--update=product_promote",
           ],
           "file": "home/odoo/odoo/14.0/odoo/odoo-bin"
         },

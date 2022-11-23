@@ -54,8 +54,8 @@
             </tree>
         </field>
     </record>    
-    
-        <record id="sale_order_line_tag_action" model="ir.actions.act_window">
+
+    <record id="sale_order_line_tag_action" model="ir.actions.act_window">
         <field name="name">Sale Order Line Tags</field>
         <field name="res_model">sale.order.line.tag</field>
         <field name="view_id" ref="sale_order_line_tag_view_tree"/>
