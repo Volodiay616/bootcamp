@@ -14,7 +14,8 @@
         'security/ir.model.access.csv',
         # 'report/sale_order_line_report_views.xml',
         'report/sale_order_line_report_templates.xml',
-        'views/sale_order_line.xml'
+        'views/sale_order_line_views.xml',
+        'views/sale_order_line_tag_views.xml'
     ],
     'demo':[
         'data/demo_data.xml',

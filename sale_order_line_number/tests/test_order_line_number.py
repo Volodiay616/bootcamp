@@ -56,16 +56,11 @@ class TestOrderLine(TransactionCase):
           
         self.sale_order_1.order_line[1].sequence = 6
               
-        
-        so_line_2.invalidate_cache()
         self.assertEqual(so_line_2.line_number, 1, "line number must be equal to 1")
         self.assertEqual(so_line_1.line_number, 2, "line number must be equal to 2")
-        
-        
-        
+                
         self.assertEqual(so_line_1.product_id, self.product_cat, "must be product cat")
         self.assertEqual(so_line_2.product_id, self.product_dog, "must be product dog") 
-        
         
         # Delete first line
         so_line_2.unlink()

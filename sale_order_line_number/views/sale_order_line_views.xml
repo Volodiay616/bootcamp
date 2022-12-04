@@ -42,30 +42,6 @@
         name="Sale Order Lines"
         parent="sale.sale_order_menu"
         action="sale_order_line_action"
-        sequence="10"/>
-
-    <record id="sale_order_line_tag_view_tree" model="ir.ui.view">
-        <field name="name">Sale Order Line Tags</field>
-        <field name="model">sale.order.line.tag</field>
-        <field name="arch" type="xml">
-            <tree string="Tags" editable="bottom">
-                <field name="name"/>
-                <field name="color" widget="color_picker" />
-            </tree>
-        </field>
-    </record>    
-
-    <record id="sale_order_line_tag_action" model="ir.actions.act_window">
-        <field name="name">Sale Order Line Tags</field>
-        <field name="res_model">sale.order.line.tag</field>
-        <field name="view_id" ref="sale_order_line_tag_view_tree"/>
-    </record>
-       
-    <menuitem id="menu_so_order_line_tags"
-        name="Line Tags"
-        parent="sale.menu_sales_config"
-        action="sale_order_line_tag_action"
-        sequence="3"/>
-      
+        sequence="10"/>    
 
 </odoo>
