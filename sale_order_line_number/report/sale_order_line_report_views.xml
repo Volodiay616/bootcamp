@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
     <record id="view_order_line_number" model="ir.ui.view">
         <field name="name">sale.report.line.number</field>
         <field name="model">sale.order.line.report</field>
         <field name="inherit_id" ref="view_order_product_search" />
-        <!-- <field name="arch" type="xml"> -->
-            <xpath expr="//" position = "before">
-                <field name="line_number"/>
-            </xpath>        
+        <field name="arch" type="xml">
+            <xpath expr="//" position="before">
+                <field name="line_number" />
+            </xpath>
         </field>
     </record>
 

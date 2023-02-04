@@ -1,8 +1,0 @@
-<odoo noupdate="1">
-
-    <!-- Tags -->
-    <record id="tag_staging" model="sale.order.line.tag">
-        <field name="name">Demo Tag #1</field>
-        <field name="color">2</field>
-    </record>
-</odoo>
