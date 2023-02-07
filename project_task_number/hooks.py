@@ -6,7 +6,5 @@ def _task_number_post_init(cr, registry):
     env = api.Environment(cr, SUPERUSER_ID, {})
     # all_tasks = env['project.task'].mapped("project_id")
     all_tasks = env["project.task"].search([])
-    n = 1
     for tasks in all_tasks.sorted(lambda l: l.id):
-        tasks.task_number = n
-        n += 1
+        tasks.task_number = env["ir.sequence"].next_by_code("project.task")
