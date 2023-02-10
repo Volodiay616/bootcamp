@@ -31,9 +31,8 @@ class ProjectTask(models.Model):
     @api.model
     def _name_search(self, name, args=None, operator="ilike", limit=100):
         args = list(args or [])
-        if operator == "ilike" and not (name or "").strip():
-            domain = []
-        else:
+        domain = []
+        if name:
             domain = [
                 "|",
                 ("name", operator, name),
